@@ -1,65 +1,69 @@
 <template>
   <div class="container">
-    <ResultComponent
-      v-if="showResult"
-      :numberOfQuestions="numberOfQuestions"
+    <StartComponent v-if="!started" @start-quiz="started = true" />
+    <ResultComponent 
+      v-else-if="showResult" 
+      :numberOfQuestions="numberOfQuestions" 
       :score="correctAnswers"
-      @retry="showResult = false"/>
-    <QuizComponent
-      v-else
-      @finished="showResult = true"
+      @retry="showResult = false" />
+    <QuizComponent 
+      v-else 
+      @finished="showResult = true" 
       @result="(score) => correctAnswers = score"
-      :numberOfQuestions="numberOfQuestions"/>
-      <div class="footer"></div>
+      :numberOfQuestions="numberOfQuestions" />
+    <div class="footer"></div>
   </div>
 </template>
 
 <script>
 import QuizComponent from './components/QuizComponent.vue';
 import ResultComponent from './components/ResultComponent.vue';
+import StartComponent from './components/StartComponent.vue';
 
 export default {
   name: 'App',
-  data(){
+  data() {
     return {
+      started: false,
       showResult: false,
       numberOfQuestions: 3,
       correctAnswers: 0
     }
   },
-  components:{
+  components: {
     QuizComponent,
-    ResultComponent
+    ResultComponent,
+    StartComponent
   }
 }
 </script>
 
 <style>
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.container{
-    width: 100%;
-    height: 100%;
-    background-color: #FCF6E7;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: #FCF6E7;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-.logo{
-    height: 100%;
+.logo {
+  height: 100%;
 }
 
-.footer{
-    background-image: url('./assets/pawprints2-removebg-preview.png');
-    height: 110px;
-    margin-top: auto;
+.footer {
+  background-image: url('./assets/pawprints2-removebg-preview.png');
+  height: 110px;
+  margin-top: auto;
 }
 
-button{
+button {
   align-items: center;
   background-color: #FADBD7;
   border: 2px solid #111;
@@ -68,7 +72,7 @@ button{
   color: #111;
   cursor: pointer;
   display: flex;
-  font-family: Inter,sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 16px;
   height: 48px;
   justify-content: center;
@@ -109,19 +113,19 @@ button:active {
   outline: 0;
 }
 
-button:disabled{
-    background-color: white;
-    color: black;
-    cursor:default;
+button:disabled {
+  background-color: white;
+  color: black;
+  cursor: default;
 }
 
 button:hover {
   outline: 0;
 }
 
-.buttons-container{
-    display: flex;
-    justify-content: space-between;
-    z-index:1;
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
 }
 </style>
