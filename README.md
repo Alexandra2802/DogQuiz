@@ -2,7 +2,7 @@
 
 See it live here: https://doggie-quiz.netlify.app/
 
-Doggie Quiz is a fun and interactive web-based quiz about dogs! Test your knowledge and learn interesting facts about different dog breeds. Built with **JavaScript, HTML, and SCSS**, this project is fully responsive and works seamlessly across various screen sizes.
+Doggie Quiz is a fun and interactive web-based quiz about dogs! Test your knowledge and learn interesting facts about different dog breeds.This project is fully responsive and works seamlessly across various screen sizes.
 
 ## Features ✨
 - 🐾 Interactive multiple-choice quiz
