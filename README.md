@@ -13,6 +13,5 @@ Doggie Quiz is a fun and interactive web-based quiz about dogs! Test your knowle
 - ⏳ Timer-based quiz, adding a challenge by limiting the time to answer each question
 
 ## Technologies Used 🛠️
-- **HTML5** for structured content
+- **VueJS**
 - **SCSS** for enhanced styling and maintainability
-- **JavaScript (ES6+)** for dynamic interactions
