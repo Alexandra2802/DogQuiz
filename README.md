@@ -1,24 +1,18 @@
-# dog-quiz-vue
+# Doggie Quiz 🐶
 
-## Project setup
-```
-npm install
-```
+See it live here: https://doggie-quiz.netlify.app/
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Doggie Quiz is a fun and interactive web-based quiz about dogs! Test your knowledge and learn interesting facts about different dog breeds. Built with **JavaScript, HTML, and SCSS**, this project is fully responsive and works seamlessly across various screen sizes.
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## Features ✨
+- 🐾 Interactive multiple-choice quiz
+- 🎨 Clean and modern UI with SCSS styling
+- 📱 Fully responsive design for desktop, tablet, and mobile
+- 🎯 Score tracking to keep track of correct answers
+- 🔁 Randomized questions for a fresh experience every time
+- ⏳ Timer-based quiz, adding a challenge by limiting the time to answer each question
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Technologies Used 🛠️
+- **HTML5** for structured content
+- **SCSS** for enhanced styling and maintainability
+- **JavaScript (ES6+)** for dynamic interactions
